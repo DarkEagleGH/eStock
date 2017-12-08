@@ -13,6 +13,9 @@ public class Item {
     private int quantity;
     private int categoryId;
 
+    public Item() {
+    }
+
     public Item(int id, String name, String model, int manufacturerId, BigDecimal price, Clob description, int quantity, int categoryId) {
         this.id = id;
         this.name = name;

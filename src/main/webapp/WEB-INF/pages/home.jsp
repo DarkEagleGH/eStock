@@ -1,3 +1,4 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Meystrikt
@@ -11,6 +12,8 @@
     <title>Title</title>
 </head>
 <body>
-    Home page
+<h1>eStock home page</h1><br><br>
+    <a href="/eStock/customer">Customers</a><br>
+    <a href="/eStock/adminpanel">Admin panel</a>
 </body>
 </html>

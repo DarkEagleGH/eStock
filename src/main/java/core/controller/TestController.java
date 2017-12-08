@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.jws.WebMethod;
+import java.util.List;
 
 @Controller
 @RequestMapping("/customer")
@@ -23,5 +23,11 @@ public class TestController {
     public @ResponseBody
     String getResponseBody() {
         return testService.getMessage();
+    }
+
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    public @ResponseBody
+    List getList() {
+        return testService.getList();
     }
 }

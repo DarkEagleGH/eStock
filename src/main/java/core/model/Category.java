@@ -5,6 +5,9 @@ public class Category {
     private int parentId;
     private String name;
 
+    public Category() {
+    }
+
     public Category(int id, int parentId, String name) {
         this.id = id;
         this.parentId = parentId;

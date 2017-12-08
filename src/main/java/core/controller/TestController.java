@@ -25,9 +25,22 @@ public class TestController {
         return testService.getMessage();
     }
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @RequestMapping(value = "/items", method = RequestMethod.GET)
     public @ResponseBody
-    List getList() {
-        return testService.getList();
+    List getItems() {
+        return testService.getItems();
     }
+
+    @RequestMapping(value = "/mans", method = RequestMethod.GET)
+    public @ResponseBody
+    List getMans() {
+        return testService.getManufacturers();
+    }
+
+    @RequestMapping(value = "/cats", method = RequestMethod.GET)
+    public @ResponseBody
+    List getCats() {
+        return testService.getCategories();
+    }
+
 }

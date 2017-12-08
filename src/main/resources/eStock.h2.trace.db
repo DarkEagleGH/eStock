@@ -335,3 +335,48 @@ org.h2.message.DbException: Wrong user name or password [28000-196]
 Caused by: org.h2.jdbc.JdbcSQLException: Wrong user name or password [28000-196]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 63 more
+2017-12-08 21:19:42 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Git/eStock/src/main/resources/eStock.h2.mv.db [1.4.196/7]" [50000-196]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:95)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:378)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:361)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2930)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:155)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:100)
+	at org.h2.engine.Database.getPageStore(Database.java:2476)
+	at org.h2.engine.Database.open(Database.java:697)
+	at org.h2.engine.Database.openDatabase(Database.java:276)
+	at org.h2.engine.Database.<init>(Database.java:270)
+	at org.h2.engine.Engine.openSession(Engine.java:64)
+	at org.h2.engine.Engine.openSession(Engine.java:176)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:154)
+	at org.h2.engine.Engine.createSession(Engine.java:137)
+	at org.h2.engine.Engine.createSession(Engine.java:27)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:354)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:100)
+	at org.h2.Driver.connect(Driver.java:69)
+	at com.wisecoders.dbs.rdbms.connect.a.a.d.r(SourceFile:57)
+	at com.wisecoders.dbs.rdbms.connect.a.a.d.a(SourceFile:102)
+	at com.wisecoders.dbs.browse.b.e.a(SourceFile:102)
+	at com.wisecoders.dbs.browse.b.f.c(SourceFile:41)
+	at com.wisecoders.dbs.browse.b.b.a(SourceFile:88)
+	at com.wisecoders.dbs.browse.b.b.a(SourceFile:63)
+	at com.wisecoders.dbs.browse.b.b.a(SourceFile:55)
+	at com.wisecoders.dbs.browse.b.b.doInBackground(SourceFile:18)
+	at javax.swing.SwingWorker$1.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at javax.swing.SwingWorker.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:D:/Git/eStock/src/main/resources/eStock.h2.mv.db [1.4.196/7]" [50000-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 35 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:D:/Git/eStock/src/main/resources/eStock.h2.mv.db [1.4.196/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:765)
+	at org.h2.mvstore.FileStore.open(FileStore.java:173)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:347)
+	... 30 more

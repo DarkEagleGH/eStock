@@ -57,7 +57,7 @@
                     <div class="divTableBlock">
                         <div class="divTableRow">
                             <div class="divTableCell">Update</div>
-                            <div class="divTableCell">POST</div>
+                            <div class="divTableCell">PUT</div>
                             <div class="divTableCell">/update</div>
                             <div class="divTableCell">{<br>
                                 "id": {id},<br>

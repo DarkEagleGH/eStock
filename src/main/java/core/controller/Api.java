@@ -173,7 +173,7 @@ public class Api {
 
     // ====================== UPDATE =========================================
 
-    @RequestMapping(value = "/item/update", method = RequestMethod.POST)
+    @RequestMapping(value = "/item/update", method = RequestMethod.PUT)
     public @ResponseBody
     ResponseEntity updateItem(@RequestBody Item item) {
         String resp = service.updateItem(item);
@@ -183,7 +183,7 @@ public class Api {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(resp);
     }
 
-    @RequestMapping(value = "/manufacturer/update", method = RequestMethod.POST)
+    @RequestMapping(value = "/manufacturer/update", method = RequestMethod.PUT)
     public @ResponseBody
     ResponseEntity updateManufacturer(@RequestBody Manufacturer manufacturer) {
         String resp = service.updateManufacturer(manufacturer);
@@ -193,7 +193,7 @@ public class Api {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(resp);
     }
 
-    @RequestMapping(value = "/category/update", method = RequestMethod.POST)
+    @RequestMapping(value = "/category/update", method = RequestMethod.PUT)
     public @ResponseBody
     ResponseEntity updateCategory(@RequestBody Category category) {
         String resp = service.updateCategory(category);

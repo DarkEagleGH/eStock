@@ -38,7 +38,4 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
-      - run: mvn clean package jetty:run
-    test:
-      override:
-        - echo "done"
+      - run: mvn verify

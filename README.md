@@ -2,4 +2,5 @@
 Simple web stock service based on Spring MVC
 
 Run
--- mvn clean package jetty:run
+
+    mvn clean package jetty:run

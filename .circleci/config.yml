@@ -41,5 +41,4 @@ jobs:
       - run: mvn clean package jetty:run
     test:
       override:
-        - "true"
-        timeout: 60
+        - echo "done"

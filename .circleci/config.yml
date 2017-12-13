@@ -42,3 +42,4 @@ jobs:
     test:
       override:
         - "true"
+        timeout: 60

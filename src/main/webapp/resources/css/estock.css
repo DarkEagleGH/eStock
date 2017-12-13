@@ -133,7 +133,6 @@ ul#menu_bar li a.current, ul#menu_bar li a.current:hover {
 }
 
 div.divTableBody {
-    width: 700px;
     display: table;
 }
 

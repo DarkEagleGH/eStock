@@ -1,30 +1,21 @@
 package core.model;
 
 import java.math.BigDecimal;
-import java.sql.Clob;
 
 public class Item {
     private int id;
     private String name;
     private String model;
     private int manufacturerId;
+    private String manufacturer;
     private BigDecimal price;
-    private Clob description;
+    private String description;
     private int quantity;
     private int categoryId;
+    private String category;
+    private boolean availableInStock;
 
     public Item() {
-    }
-
-    public Item(int id, String name, String model, int manufacturerId, BigDecimal price, Clob description, int quantity, int categoryId) {
-        this.id = id;
-        this.name = name;
-        this.model = model;
-        this.manufacturerId = manufacturerId;
-        this.price = price;
-        this.description = description;
-        this.quantity = quantity;
-        this.categoryId = categoryId;
     }
 
     public int getId() {
@@ -59,6 +50,14 @@ public class Item {
         this.manufacturerId = manufacturerId;
     }
 
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
     public BigDecimal getPrice() {
         return price;
     }
@@ -67,11 +66,11 @@ public class Item {
         this.price = price;
     }
 
-    public Clob getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(Clob description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
@@ -89,5 +88,33 @@ public class Item {
 
     public void setCategoryId(int categoryId) {
         this.categoryId = categoryId;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public boolean isAvailableinStock() {
+        return availableInStock;
+    }
+
+    public void setAvailableInStock(boolean availableInStock) {
+        this.availableInStock = availableInStock;
+    }
+
+    public Object[] toArray() {
+        return new Object[]{
+            this.id,
+            this.name,
+            this.model,
+            this.manufacturerId,
+            this.price,
+            this.description,
+            this.quantity,
+            this.categoryId};
     }
 }

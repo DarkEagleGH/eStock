@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="tiles.base.template" template="/WEB-INF/pages/tiles/base_template.jsp">
+        <put-attribute name="header" value="/WEB-INF/pages/tiles/menu.jsp"/>
+    </definition>
+
+    <definition name="tiles.home" extends="tiles.base.template">
+        <put-list-attribute name="pages">
+            <add-attribute value="/WEB-INF/pages/home.jsp"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="tiles.customer" extends="tiles.base.template">
+        <put-list-attribute name="pages">
+            <add-attribute value="/WEB-INF/pages/tiles/side.jsp"/>
+            <add-attribute value="/WEB-INF/pages/customer.jsp"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="tiles.adminpanel" extends="tiles.base.template">
+        <put-list-attribute name="pages">
+            <add-attribute value="/WEB-INF/pages/adminpanel_stub.jsp"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="tiles.api" extends="tiles.base.template">
+        <put-list-attribute name="pages">
+            <add-attribute value="/WEB-INF/pages/api.jsp"/>
+        </put-list-attribute>
+    </definition>
+</tiles-definitions>

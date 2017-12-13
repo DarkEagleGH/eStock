@@ -1,5 +1,8 @@
 package core.model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Manufacturer {
     private int id;
     private String name;
@@ -26,5 +29,11 @@ public class Manufacturer {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Object[] toArray() {
+        return new Object[]{
+            this.id,
+            this.name};
     }
 }

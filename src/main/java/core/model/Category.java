@@ -1,5 +1,8 @@
 package core.model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Category {
     private int id;
     private int parentId;
@@ -36,5 +39,12 @@ public class Category {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Object[] toArray() {
+        return new Object[]{
+            this.id,
+            this.parentId,
+            this.name};
     }
 }
